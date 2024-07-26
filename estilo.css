@@ -51,3 +51,16 @@ body {
     user-select: none; /* Desactiva la selección de la imagen */
     pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
 }
+
+.btn-salir {
+    background-color: #ff4d4d; /* Color de fondo del botón "Salir" */
+    color: white; /* Color del texto del botón */
+    padding: 10px 15px; /* Espaciado interno del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.btn-salir:hover {
+    background-color: #ff1a1a; /* Color de fondo en el hover */
+}

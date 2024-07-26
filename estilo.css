@@ -23,7 +23,7 @@ body {
 .nav-links {
     display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
     align-items: center; /* Alinea verticalmente los elementos */
-    margin-bottom: 10px; /* Espacio debajo de la barra de navegación */
+    margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
 }
 
 .nav-link {
@@ -44,8 +44,8 @@ body {
 
 .decoracion {
     width: 130px; /* Ajusta el ancho de la imagen */
-    margin-top: 10px;
     height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px;
     margin-right: 220px; /* Espacio entre la imagen y los enlaces */
     margin-left: 250px; /* Espacio entre la imagen y los enlaces */
     user-select: none; /* Desactiva la selección de la imagen */
@@ -63,4 +63,21 @@ body {
 
 .btn-salir:hover {
     background-color: #ff1a1a; /* Color de fondo en el hover */
+}
+
+.icono {
+    width: 40px;
+    height: 40px; /* Mantiene la proporción de la imagen */
+    padding: 10 10px;
+    margin: 0 0px; /* Espacio horizontal entre los enlaces */
+    margin-top: 0px;
+}
+
+.xd {
+    margin-bottom: 10px;
+}
+
+.nav-center {
+    margin-right: 420px;
+
 }

@@ -1,0 +1,53 @@
+body {
+    background-color: #95f3ba; /* Color de fondo */
+    margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+}
+
+.custom-line {
+    border: none;
+    height: 2px; /* Grosor de la línea */
+    background-color: #000; /* Color de la línea */
+    margin: 0px 0; /* Espaciado vertical */
+}
+
+
+.button-container {
+    text-align: center; /* Centra los botones en el contenedor */
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.button-container .btn {
+    margin: 0 10px; /* Espacio horizontal entre los botones */
+}
+
+.nav-links {
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-bottom: 10px; /* Espacio debajo de la barra de navegación */
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #000; /* Color del texto (puedes cambiarlo según el diseño) */
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 0 5px; /* Espacio horizontal entre los enlaces */
+    transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+}
+
+.nav-link:hover {
+    background-color: #e2e6ea; /* Color de fondo en el hover */
+    color: #0056b3; /* Color del texto en el hover */
+}
+
+
+.decoracion {
+    width: 130px; /* Ajusta el ancho de la imagen */
+    margin-top: 10px;
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 220px; /* Espacio entre la imagen y los enlaces */
+    margin-left: 250px; /* Espacio entre la imagen y los enlaces */
+    user-select: none; /* Desactiva la selección de la imagen */
+    pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
+}

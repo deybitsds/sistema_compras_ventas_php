@@ -1,1 +1,1 @@
-xD
+Sistema de compra-venta moderno y bonito :v

@@ -1,10 +1,12 @@
 body {
     /* background-color: #171D26 ;  */
     /* background-color: white ;  */
-
-    
+    font-family: "Enriqueta", serif;
+    font-weight: 400;
+    font-style: normal;
     margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
 }
+
 
 .custom-line {
     border: none;
@@ -293,3 +295,86 @@ body {
   }
 
 /* BOTON AGREGAR */
+
+
+/* resultado */
+
+.resultado123 {
+    margin-left: 30px;
+    font-size: 40px;
+}
+
+/* resultado */
+
+
+/* tabla productos */
+.marco_tabla {
+    margin-top: 40px;
+    height: auto;
+    transform: translate(180px);
+    padding: 200 300px;
+    background-color: transparent; /* Color celeste */
+    padding: 10px; /* Añade un poco de espacio alrededor de la tabla */
+    box-sizing: border-box; /* Incluye el relleno y borde en el cálculo del ancho total */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    width: 1550px; /* Asegura que el div ocupe todo el ancho disponible */
+}
+
+
+.encabezado_tabla {
+    font-size: 20px;
+}
+
+.item_tabla.enc {
+    background-color: transparent;
+    font-weight: bold;
+    color: black; /* Texto blanco para el encabezado */
+    padding-right: 30px;
+    padding: 10px; /* Añade espacio interior a las celdas */
+    text-align: left; 
+}
+
+.item_tabla {
+    font-size:20px;
+
+    color: black;
+    font-weight: normal;
+    margin-left: 10px;
+    text-align: left; /* Centra el texto en el encabezado */
+}
+.item_tabla.body {
+    
+    /* font-size: 100%; */
+    color: black;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-style: solid;
+    border-bottom-width: 0px;
+    border-top-color:gray;
+
+    border-collapse: collapse; /* Combina bordes adyacentes */
+    padding: 10px;
+}
+
+
+/* Estilos para la tabla */
+.tabla_productos {
+    
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Combina bordes adyacentes */
+    border: none;
+    border-radius: 0px;
+    border-right-width: 0px;
+    color:green;
+}
+
+.item_tabla.body.accion {
+    width: 450px;
+}
+
+.item_tabla.enc.descripcion { 
+    width: 280px;
+}
+
+/* tabla productos */
+

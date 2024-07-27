@@ -32,7 +32,7 @@ for ($i = 0; $i < $filas; $i++) {
     <title>Sistema Tiendita de Don Pepe</title>
     
     <!-- importar css -->
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
     <!-- importar css -->
 
     <!-- importar fuentes -->
@@ -53,7 +53,7 @@ for ($i = 0; $i < $filas; $i++) {
      
              <!-- IZQUIERDA  -->
              <div class="nav-left">
-                 <img src="amazon.png" alt="Decoración" class="imagen-1">
+                 <img src="../amazon.png" alt="Decoración" class="imagen-1">
              </div>
              <!-- IZQUIERDA  -->
      
@@ -72,7 +72,7 @@ for ($i = 0; $i < $filas; $i++) {
              <!-- DERECHA -->
                 <!-- CONFIGURACION -->
                 <a href="index.html" class="nav-link-icono">
-                    <img src="tornillo.png" alt="Icono" class="icono_tornillo">
+                    <img src="../tornillo.png" alt="Icono" class="icono_tornillo">
                 </a>
                 <!-- CONFIGURACION -->
         
@@ -95,7 +95,7 @@ for ($i = 0; $i < $filas; $i++) {
      <nav class="nav-links">
         <div class="label-productos">
             <!-- icono -->
-            <img src="tienda.png" alt="Decoración" class="imagen-2">
+            <img src="../tienda.png" alt="Decoración" class="imagen-2">
             <!-- icono -->
             
             <!-- titulo -->

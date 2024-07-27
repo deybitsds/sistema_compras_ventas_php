@@ -67,7 +67,7 @@ for ($i = 0; $i < $filas; $i++) {
                  <a href="../compras/compras.php" class="nav-link actual">Compras</a>
                  <a href="../ventas/ventas.php" class="nav-link">Ventas</a>
                  <a href="../usuarios/usuarios.php" class="nav-link">Usuarios</a>
-                 <a href="../clientes/clientes/.php" class="nav-link">Clientes</a>
+                 <a href="../clientes/clientes.php" class="nav-link">Clientes</a>
                  <a href="../productos/productos.php" class="nav-link">Productos</a>
                  <a href="../reportes/reportes.php" class="nav-link">Reportes</a>
              </div>

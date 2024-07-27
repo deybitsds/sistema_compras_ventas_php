@@ -1,1 +1,1 @@
-Sistema de compra-venta moderno y bonito :v
+Sistema de compra-venta hesho con musho amor :v

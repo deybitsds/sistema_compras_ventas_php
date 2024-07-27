@@ -616,7 +616,7 @@ input:hover {
   fill: #dc143c;
 }
 
-.icono_borrar {
+.icono_accion {
   text-decoration: none; /* Elimina el subrayado */
   color: transparent; /* Color del texto (puedes cambiarlo según el diseño) */
   padding: 0px 0px; /* Espaciado interno de los enlaces */

@@ -1,26 +1,10 @@
 <?php
 
-// function obtenerClientes(){
-//     $sentencia = "SELECT * FROM clientes";
-//     return select($sentencia);
-// }
-
-// $clientes = obtenerClientes();
-
-
-// Prueba: Añadir elementos del 1 al 36 en la tabla
-$arreglo = [];
-$contador = 1;
-$filas = 6;
-
-for ($i = 0; $i < $filas; $i++) {
-    $subarreglo = [];
-    for ($j = 0; $j < 6; $j++) {
-        $subarreglo[] = $contador;
-        $contador++;
-    }
-    $arreglo[] = $subarreglo;
+function obtenerCompras(){
+    return 1;
 }
+
+$compras = obtenerCompras();
 
 ?>
 
@@ -32,7 +16,7 @@ for ($i = 0; $i < $filas; $i++) {
     <title>Sistema Tiendita de Don Pepe</title>
     
     <!-- importar css -->
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
     <!-- importar css -->
 
     <!-- importar fuentes -->
@@ -53,31 +37,31 @@ for ($i = 0; $i < $filas; $i++) {
      
              <!-- IZQUIERDA  -->
              <div class="nav-left">
-                 <img src="amazon.png" alt="Decoración" class="imagen-1">
+                 <img src="../imgs_toolbar/amazon.png" alt="Decoración" class="imagen-1">
              </div>
              <!-- IZQUIERDA  -->
      
              <!-- CENTRAL  -->
              <div class="nav-center">
-                 <a href="index.html" class="nav-link">Inicio</a>
-                 <a href="index.html" class="nav-link">Compras</a>
-                 <a href="index.html" class="nav-link">Ventas</a>
-                 <a href="index.html" class="nav-link">Usuarios</a>
-                 <a href="index.html" class="nav-link">Clientes</a>
-                 <a href="index.html" class="nav-link">Productos</a>
-                 <a href="index.html" class="nav-link">Reportes</a>
+                 <a href="../home/home.php" class="nav-link">Inicio</a>
+                 <a href="../compras/compras.php" class="nav-link">Compras</a>
+                 <a href="../ventas/ventas.php" class="nav-link">Ventas</a>
+                 <a href="../usuarios/usuarios.php" class="nav-link">Usuarios</a>
+                 <a href="../clientes/clientes/.php" class="nav-link">Clientes</a>
+                 <a href="../productos/productos.php" class="nav-link">Productos</a>
+                 <a href="../reportes/reportes.php" class="nav-link">Reportes</a>
              </div>
              <!-- CENTRAL  -->
              
              <!-- DERECHA -->
                 <!-- CONFIGURACION -->
-                <a href="index.html" class="nav-link-icono">
-                    <img src="tornillo.png" alt="Icono" class="icono_tornillo">
+                <a href="../editar_perfil/editar_perfil.php" class="nav-link-icono">
+                    <img src="../imgs_toolbar/tornillo.png" alt="Icono" class="icono_tornillo">
                 </a>
                 <!-- CONFIGURACION -->
         
                 <!-- SALIR -->
-                <a href="logout.html" class="icono_salir">
+                <a href="../login/login.php" class="icono_salir">
                     <button class="boton_salir"></button>
                 </a>
                 <!-- SALIR -->
@@ -95,7 +79,7 @@ for ($i = 0; $i < $filas; $i++) {
      <nav class="nav-links">
         <div class="label-productos">
             <!-- icono -->
-            <img src="tienda.png" alt="Decoración" class="imagen-2">
+            <img src="imgs/tienda.png" alt="Decoración" class="imagen-2">
             <!-- icono -->
             
             <!-- titulo -->
@@ -106,7 +90,7 @@ for ($i = 0; $i < $filas; $i++) {
 
         <!-- boton agregar -->
         <div class="label-opciones">
-            <a href ="index.html" class = "nav-link-icono">
+            <a href ="registrar_compra.php" class = "nav-link-icono">
             <button type="button" class="boton_add">
                 <span class="boton_add__text">Agregar</span>
                 <span class="boton_add__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
@@ -123,7 +107,7 @@ for ($i = 0; $i < $filas; $i++) {
 
 
         <!-- barra busqueda -->
-        <form action="correcto.php" method="post" class="input-group mb-3 mt-3">
+        <form action="buscar_compra.php" method="post" class="input-group mb-3 mt-3">
 
         <div class="group_search">
         <svg viewBox="0 0 24 24" aria-hidden="true" class="icon_search">
@@ -145,34 +129,37 @@ for ($i = 0; $i < $filas; $i++) {
             <table class="tabla_productos">
             <thead class=encabezado_tabla>
                 <tr>
-                    <th class="item_tabla enc">Código</th>
-                    <th class="item_tabla enc descripcion">Descripción</th>
-                    <th class="item_tabla enc">Precio compra</th>
-                    <th class="item_tabla enc">Precio venta</th>
-                    <th class="item_tabla enc">Stock</th>
-                    <th class="item_tabla enc">Acciones</th>
+                    <th class="item_tabla enc">Atributo 1</th>
+
+                    <!-- la columna tiene un ancho más de lo normal (elminar si no te sirve) -->
+                    <th class="item_tabla enc descripcion">Atributo 2</th> 
+                    
+                    <th class="item_tabla enc">Atributo 3</th>
+                    <th class="item_tabla enc">Atributo 4</th>
+                    <th class="item_tabla enc">Atributo 5</th>
+                    <th class="item_tabla enc">Atributo N</th>
                 </tr>
             </thead>
     
             <tbody>
                 <?php
                 // Iterar sobre cada cliente del array $clientes
-                foreach($arreglo as $elemento){
+                foreach($compras as $compra){
                 ?>
                     <tr>
                         <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
-                        <td class="item_tabla body"><?php echo $elemento[0]; ?></td>
-                        <td class="item_tabla body"><?php echo $elemento[1]; ?></td>
-                        <td class="item_tabla body"><?php echo $elemento[2]; ?></td>
-                        <td class="item_tabla body"><?php echo $elemento[3]; ?></td>
-                        <td class="item_tabla body"><?php echo $elemento[4]; ?></td>
+                        <td class="item_tabla body"><?php echo $cliente->atributo1; ?></td>
+                        <td class="item_tabla body"><?php echo $cliente->atributo2; ?></td>
+                        <td class="item_tabla body"><?php echo $cliente->atributo3; ?></td>
+                        <td class="item_tabla body"><?php echo $cliente->atributo4; ?></td>
+                        <td class="item_tabla body"><?php echo $cliente->atributo_n; ?></td>
     
                         <td class="item_tabla body accion">
                         
                         
                         <div class="botones_accion">
 
-                            <a href="index.html" class="icono_borrar">
+                            <a href="editar_compra.php" class="icono_borrar">
                                 <button class="boton_editar">
                                     <svg width="20px" height="20px" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.63"></g><g id="SVGRepo_iconCarrier"> <title>edit [#1479]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-99.000000, -400.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> 
                                     <path fill="white"d="M61.9,258.010643 L45.1,258.010643 L45.1,242.095788 L53.5,242.095788 L53.5,240.106431 L43,240.106431 L43,260 L64,260 L64,250.053215 L61.9,250.053215 L61.9,258.010643 Z M49.3,249.949769 L59.63095,240 L64,244.114985 L53.3341,254.031929 L49.3,254.031929 L49.3,249.949769 Z" id="edit-[#1479]"> </path> </g> </g> </g> </g></svg>
@@ -181,7 +168,7 @@ for ($i = 0; $i < $filas; $i++) {
                             </a>
     
                             
-                            <a href="index.html" class="icono_borrar">
+                            <a href="eliminar_compra.php" class="icono_borrar">
                                 <button class="boton_borrar">
                                     <p class="text">Borrar</p>
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
@@ -189,6 +176,18 @@ for ($i = 0; $i < $filas; $i++) {
                                     </svg>
                                 </button>     
                             </a>
+
+
+                            <form action="eliminar_compra.php" method="post" class="icono_borrar">
+                                <input type="hidden" name="cliente_id" value="<?php echo $cliente->id; ?>">
+                                <button type="submit" class="boton_borrar">
+                                    <p class="text">Borrar</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
+                                        <path fill="white" d="M 13 3 A 1.0001 1.0001 0 0 0 11.986328 4 L 6 4 A 1.0001 1.0001 0 1 0 6 6 L 24 6 A 1.0001 1.0001 0 1 0 24 4 L 18.013672 4 A 1.0001 1.0001 0 0 0 17 3 L 13 3 z M 6 8 L 6 24 C 6 25.105 6.895 26 8 26 L 22 26 C 23.105 26 24 25.105 24 24 L 24 8 L 6 8 z"></path>
+                                    </svg>
+                                </button>
+                            </form>
+
 
                         </div>
 

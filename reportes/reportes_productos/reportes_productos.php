@@ -232,13 +232,13 @@ $conn->close();
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
                     <td class="item_tabla body pequeño"><?php echo $reporte_producto->id; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->descripcion; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->marca; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->modelo; ?></td>
+                    <td class="item_tabla body grande"><?php echo $reporte_producto->descripcion; ?></td>
+                    <td class="item_tabla body medio"><?php echo $reporte_producto->marca; ?></td>
+                    <td class="item_tabla body medio"><?php echo $reporte_producto->modelo; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_producto->stock_inicial; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_producto->stock_actual; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->categoria; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->unidad_medida; ?></td>
+                    <td class="item_tabla body medio"><?php echo $reporte_producto->categoria; ?></td>
+                    <td class="item_tabla body medio"><?php echo $reporte_producto->unidad_medida; ?></td>
                     <!-- (modificar esto) -->
 
                 </tr>

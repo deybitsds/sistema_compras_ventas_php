@@ -29,8 +29,8 @@ body {
   border: none;
   height: 2px; /* Grosor de la línea */
   background-color: white;
-
-  margin: 0px 21%; /* Espaciado vertical */
+  margin: 0px 230px; /* Espaciado vertical */
+  transform: translate(30px);
 }
 /* linea recta 2 */
 
@@ -285,7 +285,7 @@ input:hover {
 
 .boton_add .boton_add__text {
   font-size: 30px; /* Tamaño del texto */
-  transform: translateX(60px);
+  transform: translateX(40px);
   color: #fff;
   font-weight: 600;
 }
@@ -342,15 +342,13 @@ input:hover {
   margin-top: 40px;
   height: auto;
   width: 1450px; 
-  transform: translate(180px);
-  
-  padding: 0px 20%;
   background-color: transparent; /* Color celeste */
   padding: 10px; /* Añade un poco de espacio alrededor de la tabla */
   box-sizing: border-box; /* Incluye el relleno y borde en el cálculo del ancho total */
   overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
   background-color: #282B33;
   border-radius: 20px;
+  margin: 0px 250px; /* Espaciado vertical */
 }
 
 
@@ -400,19 +398,18 @@ input:hover {
 }
 
 .item_tabla.body.grande {
-  min-width: 120px;
+  min-width: 60px;
   max-width: 250px;
 }
 
 .tabla_productos {
   
   /* La tabla ocupa todo el ancho disponible */
-  width: auto;
+  width: 100%;
   border-collapse: collapse; /* Combina bordes adyacentes */
   border: none;
   border-radius: 0px;
   border-right-width: 0px;
-  color:green;
 }
 
 .botones_accion {
@@ -697,9 +694,10 @@ height: 20em;
 
 /* letras clickeables */
 .marco_letras {
-  margin: 0px 10%;
+  margin: 0px 230px;
   display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
   font-weight: normal;
+  transform: translate(30px);
 }
 
 /* titulo PRODUCTOS */
@@ -723,7 +721,7 @@ height: 20em;
   border: none;
   display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
   justify-content: right;
-  margin-left: 136px;
+  margin-left: 470px;
   margin-bottom: 20px;
 }
 /* titulo PRODUCTOS */

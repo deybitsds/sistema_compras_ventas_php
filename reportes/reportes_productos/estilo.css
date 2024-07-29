@@ -341,13 +341,14 @@ input:hover {
 .marco_tabla {
   margin-top: 40px;
   height: auto;
+  width: 1450px; 
   transform: translate(180px);
-  padding: 200 300px;
+  
+  padding: 0px 20%;
   background-color: transparent; /* Color celeste */
   padding: 10px; /* Añade un poco de espacio alrededor de la tabla */
   box-sizing: border-box; /* Incluye el relleno y borde en el cálculo del ancho total */
   overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
-  width: 1550px; /* Asegura que el div ocupe todo el ancho disponible */
   background-color: #282B33;
   border-radius: 20px;
 }
@@ -362,14 +363,15 @@ input:hover {
   font-weight: normal;
   color: white; /* Texto blanco para el encabezado */
   padding-right: 30px;
-  padding: 10px; /* Añade espacio interior a las celdas */
-  text-align: left; 
+  padding: 30px; /* Añade espacio interior a las celdas */
+  text-align: left;
+  
 }
 
 .item_tabla {
   font-size:20px;
   font-weight: normal;
-  margin-left: 10px;
+  padding: 30px;
   text-align: left; /* Centra el texto en el encabezado */
 }
 
@@ -383,22 +385,34 @@ input:hover {
   color: #CDCFD3;
   border-color: #CDCFD3;
   border-collapse: collapse; /* Combina bordes adyacentes */
-  padding: 10px;
+  padding: 30px;
+  text-align: justify;
 }
 
+.item_tabla.body.pequeño {
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.item_tabla.body.medio {
+  min-width: 80px;
+  max-width: 160px;
+}
+
+.item_tabla.body.grande {
+  min-width: 120px;
+  max-width: 250px;
+}
 
 .tabla_productos {
   
-  width: 100%; /* La tabla ocupa todo el ancho disponible */
+  /* La tabla ocupa todo el ancho disponible */
+  width: auto;
   border-collapse: collapse; /* Combina bordes adyacentes */
   border: none;
   border-radius: 0px;
   border-right-width: 0px;
   color:green;
-}
-
-.item_tabla.body.accion {
-  width: 450px;
 }
 
 .botones_accion {
@@ -407,8 +421,10 @@ input:hover {
   margin: 0 0px; /* Espacio horizontal entre los botones */
   padding: 0px 0px; /* Marco interno de los botones */
 }
-.item_tabla.enc.descripcion { 
-  width: 280px;
+.item_tabla.enc.descripcion {
+  min-width: 40px;
+  max-width: 100px;
+
 }
 
 /* tabla productos */
@@ -605,7 +621,7 @@ input:hover {
 /* botones-opcion reporte*/
 .marco_botones {
   color: black;
-  margin:0px 21%;
+  margin:0px 10%;
   display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
   justify-content: center;
   gap: 40px;
@@ -681,7 +697,7 @@ height: 20em;
 
 /* letras clickeables */
 .marco_letras {
-  margin: 0px 21%;
+  margin: 0px 10%;
   display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
   font-weight: normal;
 }
@@ -703,13 +719,11 @@ height: 20em;
 
 }
 
-.label-opciones {
-  margin-top: 50px;
-  margin-bottom: 10px;
+.boton_generar {
   border: none;
   display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  padding-left: 00px;
-  margin-left: 9940px;
-
+  justify-content: right;
+  margin-left: 136px;
+  margin-bottom: 20px;
 }
 /* titulo PRODUCTOS */

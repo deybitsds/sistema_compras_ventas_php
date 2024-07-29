@@ -71,10 +71,7 @@ if ($result->num_rows > 0) {
             $row['unidad_medida']
         );
     }
-} else {
-    echo "No se encontraron productos.";
-}
-
+} 
 // Cerrar la conexión
 $conn->close();
 

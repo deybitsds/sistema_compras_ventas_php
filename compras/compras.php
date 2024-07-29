@@ -243,7 +243,7 @@ for ($i = 0; $i < $filas; $i++) {
                                             </button>  
                                             
                                         </form>
-                                        <!-- BOTON BORRAR -->
+                                        <!-- BOTON EDITAR -->
 
                                 </div>
 

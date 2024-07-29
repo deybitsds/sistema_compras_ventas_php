@@ -215,7 +215,7 @@ background-color: transparent; /* Color de fondo en el hover */
   margin-left: 180px; /* Espacio entre la imagen y los enlaces */
   margin-bottom: 10px;
   user-select: none; /* Desactiva la selección de la imagen */
-  pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
+  pointer-events: none; /* Desactiva los eventos del group_search sobre la imagen */
 }
 /* imagen2 - tienda */
 

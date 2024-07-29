@@ -280,7 +280,7 @@ $conn->close();
                     ?>
                 </select>
                 
-                <button class="boton_continuar">
+                    <button class="boton_continuar">
                 <span>Continuar</span>
                 <svg class = "xd" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34" width="34">
                     <circle stroke-width="3" stroke="black" r="35.5" cy="37" cx="37"></circle>

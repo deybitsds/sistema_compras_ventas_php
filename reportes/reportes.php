@@ -99,7 +99,7 @@ for ($i = 0; $i < $filas; $i++) {
     <!-- marco superior  -->
 
     <!-- Linea recta 1 -->
-     <hr class="custom-line">
+     <!-- <hr class="custom-line"> -->
     <!-- Linea recta -->
 
     <!-- marco inferior -->
@@ -128,30 +128,7 @@ for ($i = 0; $i < $filas; $i++) {
     <hr class="custom-line2">
     <!-- linea recta 2 -->
 
-    <div class="salto_linea_botones_reporte"></div>
 
-    <div class="marco_botones">
-
-        <button class ="boton_opcion" onclick="window.location.href='reportes_productos/reportes_productos.php';">
-            <span class="boton_opcion_transition"></span>
-            <span class="boton_opcion_gradient"></span>
-            <span class="boton_opcion_label">Productos</span>
-        </button>
-
-        <button class ="boton_opcion" onclick="window.location.href='reportes_empleados/reportes_empleados.php';">
-            <span class="boton_opcion_transition"></span>
-            <span class="boton_opcion_gradient"></span>
-            <span class="boton_opcion_label">Empleados</span>
-        </button>
-
-        <button class ="boton_opcion" onclick="window.location.href='reportes_kardex/reportes_kardex.php';">
-            <span class="boton_opcion_transition"></span>
-            <span class="boton_opcion_gradient"></span>
-            <span class="boton_opcion_label">Kardex</span>
-        </button>
-
-    </div>
-    
     <div class="salto_linea_botones_reporte"></div>
 
     <div class="marco_botones">
@@ -176,6 +153,30 @@ for ($i = 0; $i < $filas; $i++) {
 
     </div>
 
+    <div class="salto_linea_botones_reporte"></div>
+
+    <div class="marco_botones">
+
+        <button class ="boton_opcion" onclick="window.location.href='reportes_productos/reportes_productos.php';">
+            <span class="boton_opcion_transition"></span>
+            <span class="boton_opcion_gradient"></span>
+            <span class="boton_opcion_label">Productos</span>
+        </button>
+
+        <button class ="boton_opcion" onclick="window.location.href='reportes_empleados/reportes_empleados.php';">
+            <span class="boton_opcion_transition"></span>
+            <span class="boton_opcion_gradient"></span>
+            <span class="boton_opcion_label">Empleados</span>
+        </button>
+
+        <button class ="boton_opcion" onclick="window.location.href='reportes_kardex/reportes_kardex.php';">
+            <span class="boton_opcion_transition"></span>
+            <span class="boton_opcion_gradient"></span>
+            <span class="boton_opcion_label">Kardex</span>
+        </button>
+
+    </div>
+    
 
 </body>
 </html>

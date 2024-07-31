@@ -1,3 +1,15 @@
+body {
+  /* background-color: #171D26 ;  */
+  /* background-color: white ;  */
+  font-family: "Enriqueta", serif;
+  font-family: "Fira Sans", sans-serif;
+
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+  background-color: #1F2027;
+
+}
 
 /* linea recta 1 */
 .custom-line {
@@ -26,6 +38,19 @@
 }
 /* linea recta 2 */
 
+.nav-left {
+width: 110px; /* Ajusta el ancho de la imagen */
+height: 80px; /* Mantiene la proporción de la imagen */
+margin-top: -20px;
+margin-right: 140px; /* Espacio entre la imagen y los enlaces */
+margin-left: 250px; 
+margin-bottom: 15px;
+/* Desactiva la selección de la imagen */
+/* user-select: none;  */
+/* Desactiva los eventos del puntero sobre la imagen */
+/* pointer-events: none;  */
+}
+
 
 /* letras clickeables */
 .nav-links {
@@ -34,7 +59,6 @@
   font-weight: normal;
   align-items: center; /* Alinea verticalmente los elementos */
   margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
-  /* background-color: green; */
 }
 
 .nav-link {
@@ -42,10 +66,14 @@
   /* Elimina el subrayado */
   text-decoration: none; 
   font-weight: normal; /* ESTABLECE LA NEGRITA DEL NARVAR*/
-  background-color: transparent;
+  color: #000; /* Color del texto (puedes cambiarlo según el diseño) */
+
+
   /* letrax */
   color: #4a707a; 
   color: #6F757C;
+
+
   padding: 10px 15px; /* Espaciado interno de los enlaces */
   border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
   border-radius: 4px; /* Bordes redondeados */
@@ -117,8 +145,9 @@ font-weight: normal;
   width: 50px;
   height: 50px; /* Mantiene la proporción de la imagen */
   padding: 0 0px;
-  margin: 0 0px; /* Espacio horizontal entre los enlaces */
-  margin-top: 0px;
+  margin: 0 20px; /* Espacio horizontal entre los enlaces */
+background-color: transparent; /* Color de fondo en el hover */
+margin-top: 0px;
 }
 
 .icono_tornillo:hover svg path {
@@ -128,8 +157,25 @@ background-color: transparent; /* Color de fondo en el hover */
 }
 
 
+
 /* imagen tornillo */
 
+
+/* marco superior - navigation bar */
+.marco-superior {
+  margin-bottom: 10px;
+  /* margin: 0px 0px; */
+  background-color: #17181c;
+  margin-left: -10px;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.nav-center {
+  margin-right: 330px;
+  
+}
+/* marco superior - navigation bar */
 
 
 /* titulo PRODUCTOS */
@@ -425,8 +471,6 @@ input:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
-  background-color: transparent;
 }
 
 .icono_salir_final svg {
@@ -663,79 +707,4 @@ transform: scale(0.27);
 
 .salto_linea_botones_reporte {
   margin-bottom: 100px;
-}
-
-
-/*  modificaciones header :v */
-
-
-body {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
-  background-color: #1F2027;
-  margin: 0px;
-  
-}
-
-/* marco superior - navigation bar */
-.marco-superior {
-  /* margin: 0px 0px; */
-  background-color: transparent;
-  background-color: #17181c;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  max-height: 90px;
-}
-
-.nav-center {
-  /* margin-right: 330px; */
-  background-color: blue;
-  background-color: transparent;
-  margin: 0px;
-  max-height: 90px;
-  display: flex; 
-  align-items: center; 
-  min-width: 50%;
-}
-/* marco superior - navigation bar */
-
-.nav-links2 {
-
-  display: flex; 
-  /* align-items: center;  */
-  font-weight: normal;
-  margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
-  gap:170px;
-  /* background-color: #17181C; */
-}
-
-.nav-left {
-  width: 110px; /* Ajusta el ancho de la imagen */
-  /* margin-right: 140px; */
-  margin-left: 250px; 
-  background-color: transparent;
-  margin-bottom: 0px;
-  transform: translateY(-10px);
-}
-
-  
-/*  modificaciones header :v */
-
-.nav-right {
-  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  font-weight: normal;
-  align-items: center; /* Alinea verticalmente los elementos */
-  background-color: skyblue;
-  background-color: transparent;
-  gap: 20px;
-  margin: 0px;
-  max-height: 90px;
-  width: 200px;
-  display: flex; 
-  align-items: center; 
-
 }

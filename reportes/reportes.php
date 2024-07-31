@@ -24,13 +24,15 @@ for ($i = 0; $i < $filas; $i++) {
     $arreglo[] = $subarreglo;
 }
 
-$estado = "reportes";
-include('../header/header.php'); 
 
+$estado = "reportes";
+include('../header.php'); 
 ?>
 
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    
     <!-- marco inferior -->
-
+    
     <!-- Titulo Portal -->
     <div class="marco_letras">
 

@@ -7,6 +7,8 @@ body {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+  background-color: #1F2027;
+
 }
 
 /* linea recta 1 */
@@ -26,13 +28,9 @@ body {
 .custom-line2 {
   border: none;
   height: 2px; /* Grosor de la línea */
-  /* Color de la línea */
-
-  /* letrax */
   background-color: white;
 
-
-  margin: 0px 180px; /* Espaciado vertical */
+  margin: 0px 21%; /* Espaciado vertical */
 }
 /* linea recta 2 */
 
@@ -176,33 +174,7 @@ background-color: transparent; /* Color de fondo en el hover */
 /* marco superior - navigation bar */
 
 
-/* titulo PRODUCTOS */
-.label-productos {
-  color: white;
-  margin-top: 50px;
-  margin-bottom: 5px;
-  border: none;
-  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  
-}
 
-.productos-texto {
-  font-size: 60px; /* Tamaño del texto */
-  font-weight: normal; /* Negrita */
-  /* margin-bottom: -10px; */
-
-}
-
-.label-opciones {
-  margin-top: 50px;
-  margin-bottom: 10px;
-  border: none;
-  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  padding-left: 200px;
-  margin-left: 740px;
-
-}
-/* titulo PRODUCTOS */
 
 /* imagen2 - tienda */
 .imagen-2 {
@@ -210,7 +182,6 @@ background-color: transparent; /* Color de fondo en el hover */
   height: auto; /* Mantiene la proporción de la imagen */
   margin-top: 10px;
   margin-right: 20px; /* Espacio entre la imagen y los enlaces */
-  margin-left: 180px; /* Espacio entre la imagen y los enlaces */
   margin-bottom: 10px;
   user-select: none; /* Desactiva la selección de la imagen */
   pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
@@ -629,3 +600,116 @@ input:hover {
 }
 
 /* BOTON BORRAR */
+
+
+/* botones-opcion reporte*/
+.marco_botones {
+  color: black;
+  margin:0px 21%;
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  justify-content: center;
+  gap: 40px;
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+
+
+.boton_opcion {
+font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+font-size: 32px;
+padding: 1em 1.7em;
+width: 350px;
+height: 150px;
+font-weight: 500;
+background: #1f2937;
+color: white;
+border: none;
+position: relative;
+overflow: hidden;
+border-radius: 0.6em;
+  cursor: pointer;
+}
+
+
+.boton_opcion_gradient {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+border-radius: 0.6em;
+margin-top: -0.25em;
+background-image: linear-gradient(
+  rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 0.3)
+);
+}
+
+.boton_opcion_label {
+position: relative;
+top: -1px;
+}
+
+.boton_opcion_transition {
+transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+transition-duration: 500ms;
+background-color: rgba(16, 185, 129, 0.6);
+border-radius: 9999px;
+width: 0;
+height: 0;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+}
+
+.boton_opcion:hover .boton_opcion_transition {
+width: 20em;
+height: 20em;
+}
+
+.boton_opcion:active {
+  transform: scale(0.8);
+}
+/* botones-opcion reporte*/
+
+.salto_linea_botones_reporte {
+  margin-bottom: 60px;
+}
+
+/* letras clickeables */
+.marco_letras {
+  margin: 0px 21%;
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  font-weight: normal;
+}
+
+/* titulo PRODUCTOS */
+.label-productos {
+  color: white;
+  margin-top: 50px;
+  border: none;
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  border: none;
+}
+
+
+.productos-texto {
+  font-size: 60px; /* Tamaño del texto */
+  font-weight: normal; /* Negrita */
+  /* margin-bottom: -10px; */
+
+}
+
+.label-opciones {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: none;
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  padding-left: 00px;
+  margin-left: 9940px;
+
+}
+/* titulo PRODUCTOS */

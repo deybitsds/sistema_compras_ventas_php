@@ -35,15 +35,225 @@ $navItems["reportes"] = "Reportes";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Tiendita de Don Pepe</title>
     
+    
     <!-- importar fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Enriqueta:wght@400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- importar fuentes -->
+    
+    <!-- importar css -->
+    <!-- <link rel="stylesheet" type="text/css" href="../header/estilo.css"> -->
+    <!-- importar css -->
 
-    <style>
+<!-- <style>
 
-    </style>
+body {
+    margin: 0px;
+}
+.marco-superior {
+  /* margin: 0px 0px; */
+  background-color: transparent;
+  background-color: #17181c;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  max-height: 90px;
+}
+
+.nav-links2 {
+
+display: flex; 
+/* align-items: center;  */
+font-weight: normal;
+margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+gap:170px;
+/* background-color: #17181C; */
+}
+
+.nav-center {
+  /* margin-right: 330px; */
+  background-color: blue;
+  background-color: transparent;
+  margin: 0px;
+  max-height: 90px;
+  display: flex; 
+  align-items: center; 
+  min-width: 50%;
+}
+
+.nav-link {
+font-size: 20px;
+/* Elimina el subrayado */
+text-decoration: none; 
+font-weight: normal; /* ESTABLECE LA NEGRITA DEL NARVAR*/
+background-color: transparent;
+/* letrax */
+color: #4a707a; 
+color: #6F757C;
+padding: 10px 15px; /* Espaciado interno de los enlaces */
+border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+border-radius: 4px; /* Bordes redondeados */
+margin: 0 5px; /* Espacio horizontal entre los enlaces */
+transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+}
+
+.nav-link:hover {
+color: white; /* Color del texto en el hover */
+font-weight: normal;
+font-weight: bold;
+/* background-color: #282B33; */
+border-radius: 10px;
+}
+
+.nav-link.actual {
+color: white;
+font-weight: normal;
+}
+
+.nav-link.actual:hover {
+color: white;
+/* background-color: #282B33; */
+border-radius: 10px;
+font-weight: bold;
+}
+/* letras clickeables */
+
+
+/* iconos clickeables */
+.nav-link-icono {
+/* height: auto;
+width: 150px; */
+text-decoration: none; /* Elimina el subrayado */
+color: #000; /* Color del texto (puedes cambiarlo según el diseño) */
+padding: 0px 0px; /* Espaciado interno de los enlaces */
+border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+margin-bottom: -20px;
+margin-right: 10px;
+border-radius: 4px; /* Bordes redondeados */
+margin: 0 0px; /* Espacio horizontal entre los enlaces */
+transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+}
+
+
+.nav-link-icono:hover {
+background-color: #e2e6ea; /* Color de fondo en el hover */
+color: #0056b3; /* Color del texto en el hover */
+background-color: transparent; /* Color de fondo en el hover */
+
+}
+
+.nav-right {
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  font-weight: normal;
+  align-items: center; /* Alinea verticalmente los elementos */
+  background-color: skyblue;
+  background-color: transparent;
+  gap: 20px;
+  margin: 0px;
+  max-height: 90px;
+  width: 200px;
+  display: flex; 
+  align-items: center; 
+
+}
+
+.icono_tornillo {
+  width: 50px;
+  height: 50px; /* Mantiene la proporción de la imagen */
+  padding: 0 0px;
+  margin: 0 0px; /* Espacio horizontal entre los enlaces */
+  margin-top: 0px;
+}
+
+.icono_tornillo:hover svg path {
+stroke: white;
+background-color: transparent; /* Color de fondo en el hover */
+
+}
+
+.boton_salir_final {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: #dc143c;
+}
+
+/* plus icono_salir_final */
+.icono_salir_final {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  background-color: transparent;
+}
+
+.icono_salir_final svg {
+  width: 17px;
+}
+
+.icono_salir_final svg path {
+  fill: white;
+}
+/* texto_salir_final */
+.texto_salir_final {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.boton_salir_final:hover {
+  width: 105px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.boton_salir_final:hover .icono_salir_final {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 10px;
+}
+/* hover effect button's texto_salir_final */
+.boton_salir_final:hover .texto_salir_final {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 5px;
+}
+/* button click effect*/
+.boton_salir_final:active {
+  transform: translate(2px ,2px);
+}
+
+.nav-left {
+  width: 110px; /* Ajusta el ancho de la imagen */
+  /* margin-right: 140px; */
+  margin-left: 250px; 
+  background-color: transparent;
+  margin-bottom: 0px;
+  transform: translateY(-10px);
+}
+
+</style> -->
+
+<link rel="stylesheet" type="text/css" href="../compras/estilos.css">
 
 </head>
 

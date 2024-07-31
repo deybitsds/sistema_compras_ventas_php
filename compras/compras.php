@@ -5,6 +5,7 @@ include('../header/header.php');
 
 ?>
 
+
 <!-- continuar con la pagina web -->
 
     <!-- marco inferior -->

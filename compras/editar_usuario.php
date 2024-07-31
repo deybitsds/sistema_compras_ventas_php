@@ -1,8 +1,16 @@
 <?php
-
-
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $us_id = $_POST['usuario_id'];
+    $us_username = $_POST['usuario_usna'];
+    $us_nombre = $_POST['usuario_nombre'];
+    $us_apellido = $_POST['usuario_apellido'];
+    $us_tipo_documento = $_POST['usuario_tipo_documento'];
+    $us_nro_documento = $_POST['usuario_nro_documento'];
+    $us_direccion = $_POST['usuario_direccion'];
+    $us_telefono = $_POST['usuario_telefono'];
+    $us_email = $_POST['usuario_email'];
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,9 +49,9 @@
              <!-- CENTRAL  -->
              <div class="nav-center">
                  <a href="../home/home.php" class="nav-link">Inicio</a>
-                 <a href="../compras/compras.php" class="nav-link actual">Compras</a>
+                 <a href="../compras/compras.php" class="nav-link">Compras</a>
                  <a href="../ventas/ventas.php" class="nav-link">Ventas</a>
-                 <a href="../usuarios/usuarios.php" class="nav-link">Usuarios</a>
+                 <a href="../usuarios/usuarios.php" class="nav-link actual">Usuarios</a>
                  <a href="../clientes/clientes.php" class="nav-link">Clientes</a>
                  <a href="../productos/productos.php" class="nav-link">Productos</a>
                  <a href="../reportes/reportes.php" class="nav-link">Reportes</a>
@@ -95,7 +103,7 @@
             <!-- icono -->
             
             <!-- titulo -->
-            <span class="productos-texto">Registrar compra</span>
+            <span class="productos-texto">Modificar usuario</span>
             <!-- titulo -->
 
     </div>
@@ -113,31 +121,92 @@
 
     <div class="marco_tabla">
 
-    <form action="procesar_registrar_compra.php" method="post">
+    <form action="procesar_editar_usuario.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="usuario_id" value="<?php echo $us_id; ?>">
+        <p>El nombre actual es: <?php echo $us_nombre; ?></p>
         <p>
-            <label for="codigo">Código:</label>
-            <input type="number" id="codigo" name="codigo" required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+        </p>
+        <p>El apellido actual es: <?php echo $us_apellido; ?></p>
+        <p>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" maxlength="50" required>
         </p>
         <p>
-            <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion" minlength="2" pattern="[A-Za-z]+" required>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="">Seleccione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+            </select>
         </p>
         <p>
-            <label for="precio_compra">Precio de Compra:</label>
-            <input type="number" id="precio_compra" name="precio_compra" step="0.01" required>
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+        </p>
+        <p>El tipo de documento actual es: <?php echo $us_tipo_documento; ?></p>
+        <p>
+            <label for="tipo_documento">Tipo de Documento:</label>
+            <select id="tipo_documento" name="tipo_documento" required>
+                <option value="">Seleccione</option>
+                <option value="DNI">DNI</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </p>
+        <p>El número de documento actual es: <?php echo $us_nro_documento; ?></p>
+        <p>
+            <label for="nro_documento">Número de Documento:</label>
+            <input type="text" id="nro_documento" name="nro_documento" maxlength="20" required>
         </p>
         <p>
-            <label for="precio_venta">Precio de Venta:</label>
-            <input type="number" id="precio_venta" name="precio_venta" step="0.01" required>
+            <label for="foto">Foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+        </p>
+        <p>La dirección actual es: <?php echo $us_direccion; ?></p>
+        <p>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" maxlength="100" required>
+        </p>
+        <p>El teléfono actual es: <?php echo $us_telefono; ?></p>
+        <p>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" maxlength="15" required>
+        </p>
+        <p>El e-mail actual es: <?php echo $us_email; ?></p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" maxlength="50" required>
         </p>
         <p>
-            <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock" required>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="">Seleccione</option>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </p>
+        <p>El nombre de usuario actual es: <?php echo $us_username; ?></p>
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" maxlength="20" required>
         </p>
         <p>
-            <input type="submit" value="Enviar">
-            <button type="button" class="cancel" onclick="window.location.href='compras.php';">Cancelar</button>
-        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="100" required>
+        </p>
+        <p>
+            <label for="tipo_usuario">Tipo de Usuario:</label>
+            <select id="tipo_usuario" name="tipo_usuario" required>
+                <option value="">Seleccione</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Empleado">Empleado</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Registrar">
+            <button type="button" class="cancel" onclick="window.location.href='usuarios.php';">Cancelar</button>
         </p>
     </form>
 
@@ -149,4 +218,3 @@
     <!-- marco inferior -->
 </body>
 </html>
-

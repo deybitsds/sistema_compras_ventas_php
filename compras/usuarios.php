@@ -30,12 +30,12 @@ try {
 $conn = null;
 $contador = 0;
 
-$estado = "usuarios";
-include('../header/header.php'); 
+
+$estado = "compras";
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
 
     <!-- marco inferior -->
     <div class="marco_inferior">
@@ -82,8 +82,9 @@ include('../header/header.php');
 
 
     <!-- barra busqueda -->
-    <!-- clase barra busqueda -->
-    <!-- <form action="buscar_compra.php" method="post" class="input-group mb-3 mt-3">
+    <form action="buscar_compra.php" method="post" class="input-group mb-3 mt-3">
+
+        <!-- clase barra busqueda -->
         <div class="group_search">
         <svg viewBox="0 0 21 21" aria-hidden="true" class="icon_search">
           <g>
@@ -94,8 +95,8 @@ include('../header/header.php');
         </svg>
         <input class="input_search" type="search" name="codigo_buscado" placeholder="Ingrese código de barra" />
         </div>
-    </form> -->
-    <!-- clase barra busqueda -->
+        <!-- clase barra busqueda -->
+    </form>
     <!-- barra busqueda -->
 
 

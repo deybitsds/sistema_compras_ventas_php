@@ -26,7 +26,7 @@ for ($i = 0; $i < $filas; $i++) {
 
 
 $estado = "reportes";
-include('../header.php'); 
+include('../header/header.php'); 
 ?>
 
     <link rel="stylesheet" type="text/css" href="estilo.css">

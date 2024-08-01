@@ -214,12 +214,9 @@ include('../header/header.php');
         <!-- encabezado de la tabla -->
         <thead class=encabezado_tabla>
             <tr>
-                <th class="item_tabla enc">Código</th>
-                <th class="item_tabla enc">Tipo Comprobante</th>
                 <th class="item_tabla enc">Nro. Comprobante</th>
+                <th class="item_tabla enc">Tipo Comprobante</th>
                 <th class="item_tabla enc">Fecha</th>
-                <th class="item_tabla enc">Cód. Proveedor </th>
-                <th class="item_tabla enc">Cód. Producto </th>
                 <th class="item_tabla enc">Cantidad</th>
                 <th class="item_tabla enc">Total</th>
             </tr>
@@ -236,12 +233,9 @@ include('../header/header.php');
                 <tr>
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
-                    <td class="item_tabla body pequeño"><?php echo $reporte_compra->codigo; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_compra->tipo_comprobante; ?></td>
                     <td class="item_tabla body grande"><?php echo $reporte_compra->nro_comprobante; ?></td>
+                    <td class="item_tabla body pequeño"><?php echo $reporte_compra->tipo_comprobante; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_compra->fecha; ?></td>
-                    <td class="item_tabla body medio"><?php echo $reporte_compra->proveedor_id; ?></td>
-                    <td class="item_tabla body medio"><?php echo $reporte_compra->producto_id; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_compra->cantidad; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_compra->precio; ?></td>
                     

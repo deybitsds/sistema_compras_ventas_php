@@ -135,7 +135,7 @@ include('../header/header.php');
         <!-- encabezado de la tabla -->
         <thead class=encabezado_tabla>
             <tr>
-                <th class="item_tabla enc">Código</th>
+                <!-- <th class="item_tabla enc">Código</th> -->
                 <th class="item_tabla enc descripcion">Descripción</th>
                 <th class="item_tabla enc">Marca</th>
                 <th class="item_tabla enc">Modelo</th>
@@ -157,7 +157,7 @@ include('../header/header.php');
                 <tr>
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
-                    <td class="item_tabla body pequeño"><?php echo $reporte_producto->id; ?></td>
+                    <!-- <td class="item_tabla body pequeño"><?php echo $reporte_producto->id; ?></td> -->
                     <td class="item_tabla body grande"><?php echo $reporte_producto->descripcion; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_producto->marca; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_producto->modelo; ?></td>

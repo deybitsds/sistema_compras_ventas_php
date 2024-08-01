@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST['inicio']) || !isset($
     }
     
     // Consulta a la base de datos
-    $sql = "SELECT ventas.id AS id_venta, ventas.fecha_emision AS fecha, productos.descripcion AS producto, detalle_ventas.cantidad, (detalle_ventas.cantidad * detalle_ventas.precio) AS total
+    $sql = "SELECT ventas.nro_comprobante AS id_venta, ventas.fecha_emision AS fecha, productos.descripcion AS producto, detalle_ventas.cantidad, (detalle_ventas.cantidad * detalle_ventas.precio) AS total
             FROM ventas
             JOIN detalle_ventas ON ventas.id = detalle_ventas.venta_id
             JOIN productos ON detalle_ventas.producto_id = productos.id
@@ -200,7 +200,7 @@ include('../header/header.php');
         <!-- encabezado de la tabla -->
         <thead class=encabezado_tabla>
             <tr>
-                <th class="item_tabla enc">Código</th>
+                <th class="item_tabla enc">Nro. Comprobante</th>
                 <th class="item_tabla enc">Fecha</th>
                 <th class="item_tabla enc descripcion">Descripción</th>
                 <th class="item_tabla enc">Cantidad</th>
@@ -219,7 +219,7 @@ include('../header/header.php');
                 <tr>
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
-                    <td class="item_tabla body pequeño"><?php echo $reporte_venta->id_venta; ?></td>
+                    <td class="item_tabla body grande"><?php echo $reporte_venta->id_venta; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_venta->fecha; ?></td>
                     <td class="item_tabla body grande"><?php echo $reporte_venta->producto; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_venta->cantidad; ?></td>

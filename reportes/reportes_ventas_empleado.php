@@ -75,7 +75,7 @@ $empleado_id = $usuario_seleccionado; // Reemplazar con el ID del empleado desea
 
 // Consulta para obtener los datos de las ventas de un empleado
 $stmt = $conn->prepare("SELECT 
-                            v.id AS venta_id,
+                            v.nro_comprobante AS venta_id,
                             v.tipo_comprobante,
                             v.nro_comprobante,
                             v.fecha_emision,
@@ -231,7 +231,7 @@ include('../header/header.php');
         <!-- encabezado de la tabla -->
         <thead class=encabezado_tabla>
             <tr>
-                <th class="item_tabla enc">Código</th>
+                <th class="item_tabla enc">Nro. Comprobante</th>
                 <th class="item_tabla enc">Descripción</th>
                 <th class="item_tabla enc descripcion">Tipo de Comprobante</th>
                 <th class="item_tabla enc">Fecha</th>
@@ -251,7 +251,7 @@ include('../header/header.php');
                 <tr>
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
-                    <td class="item_tabla body pequeño"><?php echo $reporte_venta->venta_id; ?></td>
+                    <td class="item_tabla body grande"><?php echo $reporte_venta->venta_id; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_venta->descripcion; ?></td>
                     <td class="item_tabla body grande"><?php echo $reporte_venta->tipo_comprobante; ?></td>
                     <td class="item_tabla body medio"><?php echo $reporte_venta->fecha_emision; ?></td>

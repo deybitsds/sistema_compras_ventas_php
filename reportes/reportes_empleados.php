@@ -158,7 +158,7 @@ include('../header/header.php');
         <thead class=encabezado_tabla>
             <tr>
 
-                <th class="item_tabla enc">ID</th>
+                <!-- <th class="item_tabla enc">ID</th> -->
                 <th class="item_tabla enc">Nombre</th>
                 <th class="item_tabla enc">Apellido</th>
                 <th class="item_tabla enc">Sexo</th>
@@ -186,7 +186,7 @@ include('../header/header.php');
                     <!-- Mostrando los atributos del cliente con clases CSS para el estilo -->
                     <!-- (modificar esto) -->
                  <!-- (modificar esto) -->
-                    <td class="item_tabla body pequeño"><?php echo $reporte_empleado->id; ?></td>
+                    <!-- <td class="item_tabla body pequeño"><?php echo $reporte_empleado->id; ?></td> -->
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->nombre; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->apellido; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->sexo; ?></td>

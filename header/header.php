@@ -1,17 +1,15 @@
 <?php
-// Definimos un array con los datos de navegación
 
-// session_start();
+session_start();
 
-// // if (!isset($_SESSION['user_id'])) {
-// //     header("Location: ../login/login.php");
-// //     exit;
-// // }
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login/login.php");
+    exit;
+}
 
-// // $tipo_usuario = $_SESSION['tipo_usuario'];
-// // $nombre = $_SESSION['nombre'];
-// // $apellido = $_SESSION['apellido'];
-
+$tipo_usuario = $_SESSION['tipo_usuario'];
+$nombre = $_SESSION['nombre'];
+$apellido = $_SESSION['apellido'];
 
 $navItems = [
     "home" => "Inicio",

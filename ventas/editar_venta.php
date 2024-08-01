@@ -3,6 +3,10 @@ include 'conexion.php';
 
 $conexion = conexion();
 
+$estado = "ventas";
+include('../header/header.php');
+
+
 if (!isset($_GET['id'])) {
     echo "ID de venta no especificado.";
     exit;
@@ -29,7 +33,7 @@ function obtenerClientes($conexion) {
 }
 // Función para obtener la lista de empleados
 function obtenerEmpleados($conexion) {
-    $sql = "SELECT id,  nombre, apellido FROM empleados";
+    $sql = "SELECT id,  nombre, apellido FROM usuarios";
     $result = $conexion->query($sql);
     return $result->fetch_all(MYSQLI_ASSOC);
 }
@@ -44,14 +48,8 @@ if (!$compra) {
     exit;
 }
 ?>
+<link rel="stylesheet" type="text/css" href="estilo_registrar_venta.css">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Tiendita de Don Pepe</title>
-    <link rel="stylesheet" type="text/css" href="estilo_registrar_venta.css">
 </head>
 <body>
     <!-- Código HTML para la interfaz -->
@@ -85,7 +83,7 @@ if (!$compra) {
         </p>
 
         <p>
-            <label for="empleado_id">Empleado:</label>
+            <label for="empleado_id">Usuario:</label>
             <select id="empleado_id" name="empleado_id" required>
                 <?php foreach ($empleados as $empleado): ?>
                     <option value="<?php echo htmlspecialchars($empleado['id']); ?>">
@@ -97,7 +95,7 @@ if (!$compra) {
         </p>
         <p>
             <input type="submit" value="Guardar">
-            <button type="button" class="cancel" onclick="window.location.href='compras.php';">Cancelar</button>
+            <button type="button" class="cancel" onclick="window.location.href='ventas.php';">Cancelar</button>
         </p>
     </form>
 </body>

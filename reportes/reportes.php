@@ -75,7 +75,7 @@ include('../header/header.php');
             <span class="boton_opcion_label">Empleados</span>
         </button>
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_kardex/reportes_kardex.php';">
+        <button class ="boton_opcion" onclick="window.location.href='kardex.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Kardex</span>

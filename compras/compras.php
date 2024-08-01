@@ -106,7 +106,7 @@ if (!$compras) {
             ></path>
           </g>
         </svg>
-        <input class="input_search" type="search" name="codigo_buscado" placeholder="Ingrese código de barra" />
+        <input class="input_search" type="search" name="codigo_buscado" placeholder="Ingrese número de comprobante" />
         </div>
     
         </form>

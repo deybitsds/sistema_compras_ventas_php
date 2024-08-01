@@ -99,10 +99,11 @@ if ($result->num_rows > 0)
 $conn->close();
 
 $estado = "reportes";
-include('../../header.php'); 
+include('../header/header.php'); 
+
 ?>
 
-    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo_empleados.css">
     
     <!-- marco inferior -->
 

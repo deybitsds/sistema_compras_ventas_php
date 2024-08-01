@@ -39,19 +39,19 @@ include('../header/header.php');
 
     <div class="marco_botones">
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_ventas_empleado/reportes_ventas_empleado.php';">
+        <button class ="boton_opcion" onclick="window.location.href='reportes_ventas_empleado.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Ventas por empleado</span>
         </button>
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_ventas_fecha/reportes_ventas_fecha.php';">
+        <button class ="boton_opcion" onclick="window.location.href='reportes_ventas_fecha.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Ventas por fecha</span>
         </button>
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_compras_fecha/reportes_compras_fecha.php';">
+        <button class ="boton_opcion" onclick="window.location.href='reportes_compras_fecha.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Compras por fecha</span>
@@ -63,13 +63,13 @@ include('../header/header.php');
 
     <div class="marco_botones">
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_productos/reportes_productos.php';">
+        <button class ="boton_opcion" onclick="window.location.href='reportes_productos.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Productos</span>
         </button>
 
-        <button class ="boton_opcion" onclick="window.location.href='reportes_empleados/reportes_empleados.php';">
+        <button class ="boton_opcion" onclick="window.location.href='reportes_empleados.php';">
             <span class="boton_opcion_transition"></span>
             <span class="boton_opcion_gradient"></span>
             <span class="boton_opcion_label">Empleados</span>

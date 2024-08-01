@@ -26,4 +26,11 @@ include('../header/header.php');
 <hr class="custom-line2">
 <!-- linea recta 2 -->
  
+
+<div class="imagen_home">
+
+<img src="img/login.jpg" width="1100" height="600" alt="Descripción de la imagen">
+
+</div>
+
 <?php include('footer.php'); ?>

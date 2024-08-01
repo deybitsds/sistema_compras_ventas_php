@@ -1,0 +1,738 @@
+body {
+    /* background-color: #171D26 ;  */
+    /* background-color: white ;  */
+    font-family: "Enriqueta", serif;
+    font-family: "Fira Sans", sans-serif;
+  
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+    background-color: #1F2027;
+  
+  }
+  
+  /* linea recta 1 */
+  .custom-line {
+    border: none;
+    height: 0px; /* Grosor de la línea */
+    /* Color de la línea */
+    
+    /* letrax */
+    background-color: #4a707a;
+    background-color: #000; 
+    margin: 0px -10px; /* Espaciado vertical */
+  }
+  /* linea recta 1 */
+  
+  /* linea recta 2 */
+  .custom-line2 {
+    border: none;
+    height: 2px; /* Grosor de la línea */
+    /* Color de la línea */
+    
+    /* letrax */
+    background-color: white;
+  
+  
+    margin: 0px 630px; /* Espaciado vertical */
+  }
+  /* linea recta 2 */
+  
+  .nav-left {
+  width: 110px; /* Ajusta el ancho de la imagen */
+  height: 80px; /* Mantiene la proporción de la imagen */
+  margin-top: -20px;
+  margin-right: 140px; /* Espacio entre la imagen y los enlaces */
+  margin-left: 250px; 
+  margin-bottom: 15px;
+  /* Desactiva la selección de la imagen */
+  /* user-select: none;  */
+  /* Desactiva los eventos del puntero sobre la imagen */
+  /* pointer-events: none;  */
+  }
+  
+  
+  /* letras clickeables */
+  .nav-links {
+  
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    font-weight: normal;
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-bottom: 0px; /* Espacio debajo de la barra de navegación */
+  }
+  
+  .nav-link {
+    font-size: 20px;
+    /* Elimina el subrayado */
+    text-decoration: none; 
+    font-weight: normal; /* ESTABLECE LA NEGRITA DEL NARVAR*/
+    color: #000; /* Color del texto (puedes cambiarlo según el diseño) */
+  
+  
+    /* letrax */
+    color: #4a707a; 
+    color: #6F757C;
+  
+  
+    padding: 10px 15px; /* Espaciado interno de los enlaces */
+    border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 0 5px; /* Espacio horizontal entre los enlaces */
+    transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+  }
+  
+  .nav-link:hover {
+    color: white; /* Color del texto en el hover */
+    font-weight: normal;
+    font-weight: bold;
+    /* background-color: #282B33; */
+    border-radius: 10px;
+  }
+  
+  .nav-link.actual {
+  color: white;
+  font-weight: normal;
+  }
+  
+  .nav-link.actual:hover {
+    color: white;
+    /* background-color: #282B33; */
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  /* letras clickeables */
+  
+  
+  /* iconos clickeables */
+  .nav-link-icono {
+    /* height: auto;
+    width: 150px; */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #000; /* Color del texto (puedes cambiarlo según el diseño) */
+    padding: 0px 0px; /* Espaciado interno de los enlaces */
+    border: 1px solid transparent; /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+    margin-bottom: -20px;
+    margin-right: 10px;
+    border-radius: 4px; /* Bordes redondeados */
+    margin: 0 0px; /* Espacio horizontal entre los enlaces */
+    transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+  }
+  
+  
+  .nav-link-icono:hover {
+    background-color: #e2e6ea; /* Color de fondo en el hover */
+    color: #0056b3; /* Color del texto en el hover */
+    background-color: transparent; /* Color de fondo en el hover */
+  
+  }
+  /* iconos clickeables */
+  
+  
+  /* imagen1 - logo amazon */
+  .imagen-1 {
+    width: 130px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px;
+    margin-right: 140px; /* Espacio entre la imagen y los enlaces */
+    margin-left: 250px; /* Espacio entre la imagen y los enlaces */
+    user-select: none; /* Desactiva la selección de la imagen */
+    pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
+  }
+  /* imagen1 - logo amazon */
+  
+  /* imagen tornillo */
+  .icono_tornillo {
+    width: 50px;
+    height: 50px; /* Mantiene la proporción de la imagen */
+    padding: 0 0px;
+    margin: 0 20px; /* Espacio horizontal entre los enlaces */
+  background-color: transparent; /* Color de fondo en el hover */
+  margin-top: 0px;
+  }
+  
+  .icono_tornillo:hover svg path {
+  stroke: white;
+  background-color: transparent; /* Color de fondo en el hover */
+  
+  }
+  
+  
+  
+  /* imagen tornillo */
+  
+  
+  /* marco superior - navigation bar */
+  .marco-superior {
+    margin-bottom: 10px;
+    /* margin: 0px 0px; */
+    background-color: #17181c;
+    margin-left: -10px;
+    margin-top: -10px;
+    margin-right: -10px;
+  }
+  
+  .nav-center {
+    margin-right: 330px;
+    
+  }
+  /* marco superior - navigation bar */
+  
+  
+  /* titulo PRODUCTOS */
+  .label-productos {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    border: none;
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    margin-left: 440px;
+  }
+  
+  .productos-texto {
+    font-size: 50px; /* Tamaño del texto */
+    font-weight: normal; /* Negrita */
+    /* margin-bottom: -10px; */
+  
+  }
+  
+  .label-opciones {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border: none;
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    padding-left: 200px;
+    margin-left: 740px;
+  
+  }
+  /* titulo PRODUCTOS */
+  
+  /* imagen2 - tienda */
+  .imagen-2 {
+    width: 55px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px;
+    margin-right: 20px; /* Espacio entre la imagen y los enlaces */
+    margin-left: 180px; /* Espacio entre la imagen y los enlaces */
+    margin-bottom: 10px;
+    user-select: none; /* Desactiva la selección de la imagen */
+    pointer-events: none; /* Desactiva los eventos del puntero sobre la imagen */
+  }
+  /* imagen2 - tienda */
+  
+  /* marco inferior */
+  .marco_inferior {
+  background-color: #1F2027;
+  }
+  
+  /* marco inferior */
+  
+  
+  /* BARRA BUSQUEDA */
+  .group_search {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 1550px;
+    margin-left: 180px;
+    margin-top: 20px;
+  }
+  
+  .input_search {
+    font-family: "Fira Sans", sans-serif;
+  
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+  
+    /* color del borde del search xd */
+    border-color: gray;
+    /* aca */
+    
+  
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: 0.3s ease;
+  }
+  
+  .input_search::placeholder {
+    color: #1F2027;
+  
+  }
+  
+  .input_search:focus,
+  input:hover {
+    outline: none;
+    background-color: #fff;
+  
+    /* border-color: rgba(48, 194, 67, 0.733); */
+    border-color: rgba(234, 226, 183, 1);
+    
+    box-shadow: 0 0 0 4px rgb(234 226 183 / 50%);
+  }
+  
+  .icon_search {
+    position: absolute;
+    left: 1rem;
+    fill: #7a7a7a;
+    width: 1rem;
+    height: 1rem;
+  }
+   
+  /* BARRA BUSQUEDA */
+  
+  
+  /* BOTON AGREGAR */
+  
+  .boton_add {
+    /* font-family: "Enriqueta", serif;  */
+    
+    position: relative;
+    width: 150px;
+    width: 300px;
+  
+    height: 40px;
+    height: 80px;
+  
+    cursor: pointer;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+    background-color: #54A66D;
+    
+  }
+  
+  .boton_add, .boton_add__icon, .boton_add__text {
+    transition: all 0.3s;
+  }
+  
+  .boton_add .boton_add__text {
+    font-size: 30px; /* Tamaño del texto */
+    transform: translateX(60px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .boton_add .boton_add__icon {
+    position: absolute;
+    transform: translateX(220px);
+    height: 100%;
+    width: 25%;
+  
+    background-color: #3aa856;
+    background-color: #34974d;
+  
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: center;
+  }
+  
+  .boton_add .svg {
+    width: 20%px;
+    stroke: #fff;
+    
+  }
+  
+  .boton_add:hover {
+    background: #34974d;
+  }
+  
+  .boton_add:hover .button__text {
+    color: transparent;
+  }
+  
+  .boton_add:hover .boton_add__icon {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(0);
+  }
+  
+  .boton_add:active .boton_add__icon {
+    background-color: #2e8644;
+  }
+  
+  .boton_add:active {
+    border: 1px solid #2e8644;
+  }
+  
+  /* BOTON AGREGAR */
+  
+  /* tabla productos */
+  .marco_tabla {
+    margin-top: 40px;
+    height: auto;
+    transform: translate(180px);
+    padding: 200 300px;
+    margin-left: 500px;
+    background-color: transparent; /* Color celeste */
+    padding: 10px; /* Añade un poco de espacio alrededor de la tabla */
+    box-sizing: border-box; /* Incluye el relleno y borde en el cálculo del ancho total */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+    width: 570px; /* Asegura que el div ocupe todo el ancho disponible */
+    background-color: #282B33;
+    border-radius: 20px;
+  }
+  
+  
+  .encabezado_tabla {
+    font-size: 20px;
+  }
+  
+  .item_tabla.enc {
+    background-color: transparent;
+    font-weight: normal;
+    color: white; /* Texto blanco para el encabezado */
+    padding-right: 30px;
+    padding: 10px; /* Añade espacio interior a las celdas */
+    text-align: left; 
+  }
+  
+  .item_tabla {
+    font-size:20px;
+    font-weight: normal;
+    margin-left: 10px;
+    text-align: left; /* Centra el texto en el encabezado */
+  }
+  
+  .item_tabla.body {
+    /* font-size: 100%; */
+    border-width: 1.5px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-style: solid;
+    border-bottom-width: 0px;
+    color: #CDCFD3;
+    border-color: #CDCFD3;
+    border-collapse: collapse; /* Combina bordes adyacentes */
+    padding: 10px;
+  }
+  
+  
+  .tabla_productos {
+    
+    width: 100%; /* La tabla ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Combina bordes adyacentes */
+    border: none;
+    border-radius: 0px;
+    border-right-width: 0px;
+    color:green;
+  }
+  
+  .item_tabla.body.accion {
+    width: 450px;
+  }
+  
+  .botones_accion {
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin: 0 0px; /* Espacio horizontal entre los botones */
+    padding: 0px 0px; /* Marco interno de los botones */
+  }
+  .item_tabla.enc.descripcion { 
+    width: 280px;
+  }
+  
+  /* tabla productos */
+  
+  
+  /* BOTON SALIR */
+  
+  
+  .boton_salir_final {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #dc143c;
+  }
+  
+  /* plus icono_salir_final */
+  .icono_salir_final {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icono_salir_final svg {
+    width: 17px;
+  }
+  
+  .icono_salir_final svg path {
+    fill: white;
+  }
+  /* texto_salir_final */
+  .texto_salir_final {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .boton_salir_final:hover {
+    width: 105px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .boton_salir_final:hover .icono_salir_final {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 10px;
+  }
+  /* hover effect button's texto_salir_final */
+  .boton_salir_final:hover .texto_salir_final {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 5px;
+  }
+  /* button click effect*/
+  .boton_salir_final:active {
+    transform: translate(2px ,2px);
+  }
+  /* BOTON SALIR */
+  
+  
+  /* BOTON EDITAR */
+  .boton_editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 15px;
+    gap: 15px;
+  
+  /*     
+    background-color: #007ACC;
+    outline: 3px #007ACC solid; */
+    
+    background-color: #17181c;
+    background-color: white;
+  
+    outline: 3px transparent solid;
+    /* outline: #17181c; */
+    
+  
+  
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .boton_editar .text {
+    color: #17181c;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .boton_editar svg path {
+    transition: 400ms;
+  }
+  
+  .boton_editar:hover {
+    background-color: transparent;
+    outline: 3px white solid;
+  }
+  
+  .boton_editar:hover .text {
+    color: #007ACC;
+    color: #17181c;
+    color: white;
+  
+  
+  }
+  
+  .boton_editar:hover svg path {
+    fill: #007ACC;
+    fill: #17181c;
+    fill: white;
+  
+  }
+  
+  /* BOTON EDITAR */
+  
+  /* BOTON BORRAR */
+  .boton_borrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 15px;
+    gap: 15px;
+    background-color: #dc143c;
+    outline: 3px #dc143c solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .boton_borrar .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 400ms;
+  }
+  
+  .boton_borrar svg path {
+    transition: 400ms;
+  }
+  
+  .boton_borrar:hover {
+    background-color: transparent;
+  }
+  
+  .boton_borrar:hover .text {
+    color: #dc143c;
+  }
+  
+  .boton_borrar:hover svg path {
+    fill: #dc143c;
+  }
+  
+  .icono_accion {
+    text-decoration: none; /* Elimina el subrayado */
+    color: transparent; /* Color del texto (puedes cambiarlo según el diseño) */
+    padding: 0px 0px; /* Espaciado interno de los enlaces */
+    /* Estilo de borde inicial (puedes ajustar según tu diseño) */
+    /* border: 1px solid transparent;  */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 0px; /* Espacio horizontal entre los enlaces */
+    margin-right: 30px;
+    background-color: transparent;
+    /* margin-bottom: -30px;
+    margin-top: 15px; */
+  }
+  
+  /* BOTON BORRAR */
+
+/* formulario registro */
+form {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: normal;
+    max-width: 400px;
+    width: 100%;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[list] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #54A66D;
+    color: #17181C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #34974D;
+    color: white;
+}
+
+button.cancel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #DC143C;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.cancel:hover {
+    font-weight: bold;
+    background-color: transparent;
+    border-color: #DC143C;
+    color: #DC143C;
+    border: 2px solid #DC143C;
+}
+
+.boton_reporte_hoy {
+  width: 200px;
+  height: 85px;
+  display: flex;
+  font-family: "Fira Sans", sans-serif;
+  align-items: center;
+  font-size: 23px;
+  background-color: transparent;
+  border: none;
+  justify-content: flex-start;
+  border-radius: 10px;
+  overflow: hidden; 
+  cursor: pointer;
+  margin-bottom: -30px;
+  margin-left: 150px;
+}
+
+.texto_reporte_hoy {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  color: #17181C;
+  background-color: rgb(2, 153, 153);
+  background-color: #ABADB1;
+}
+
+.boton_reporte_hoy:hover .texto_reporte_hoy {
+  background-color: rgb(0, 133, 133);
+  color:white;
+}

@@ -1,0 +1,44 @@
+.notification {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(51, 51, 51, 0.8); /* Fondo con transparencia */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    left: -350px; /* Posición inicial fuera de la pantalla */
+    bottom: 30px; /* Ubicación en la esquina inferior izquierda */
+    font-size: 20px;
+}
+.notification.show {
+    visibility: visible;
+    -webkit-animation: slidein 0.5s forwards, fadeout 0.5s 2.5s forwards;
+    animation: slidein 0.5s forwards, fadeout 0.5s 2.5s forwards;
+}
+.info {
+    background-color: rgba(0, 189, 97, 0.8); /* Azul con transparencia */
+}
+.warning {
+    background-color: rgba(255, 165, 0, 0.8); /* Naranja con transparencia */
+}
+.error {
+    background-color: rgba(255, 0, 0, 0.8); /* Rojo con transparencia */
+}
+@-webkit-keyframes slidein {
+    from {left: -350px; opacity: 0;}
+    to {left: 30px; opacity: 1;}
+}
+@keyframes slidein {
+    from {left: -350px; opacity: 0;}
+    to {left: 30px; opacity: 1;}
+}
+@-webkit-keyframes fadeout {
+    from {left: 30px; opacity: 1;}
+    to {left: -350px; opacity: 0;}
+}
+@keyframes fadeout {
+    from {left: 30px; opacity: 1;}
+    to {left: -350px; opacity: 0;}
+}

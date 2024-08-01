@@ -1,29 +1,5 @@
 <?php
 
-// conectar con db
-
-// function obtenerClientes(){
-//     $sentencia = "SELECT * FROM clientes";
-//     return select($sentencia);
-// }
-
-// $clientes = obtenerClientes();
-
-
-// Prueba: Añadir elementos del 1 al 36 en la tabla
-$arreglo = [];
-$contador = 1;
-$filas = 6;
-
-for ($i = 0; $i < $filas; $i++) {
-    $subarreglo = [];
-    for ($j = 0; $j < 6; $j++) {
-        $subarreglo[] = $contador;
-        $contador++;
-    }
-    $arreglo[] = $subarreglo;
-}
-
 
 $estado = "reportes";
 include('../header/header.php'); 

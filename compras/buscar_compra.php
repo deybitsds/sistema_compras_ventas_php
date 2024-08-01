@@ -4,40 +4,45 @@ include 'conexion.php';
 
 $conexion = conexion();
 
+
+$estado = "compras";
+include('../header/header.php'); 
+
 // Verificar si se recibió un código de barra
 if (isset($_POST['codigo_buscado'])) {
     $codigo_buscado = htmlspecialchars($_POST['codigo_buscado']);
 
     // Consultar la base de datos para obtener la compra correspondiente
-    $sentencia = $conexion->prepare("SELECT * FROM ventas WHERE nro_comprobante =?");
+    $sentencia = $conexion->prepare("SELECT  
+    compras.id,
+    compras.tipo_comprobante, 
+    compras.nro_comprobante, 
+    compras.fecha_emision, 
+    proveedores.razon_social
+FROM 
+    compras
+JOIN 
+    proveedores ON compras.proveedor_id = proveedores.id     
+WHERE 
+    compras.nro_comprobante =  ?");
     $sentencia->bind_param("s", $codigo_buscado);
     $sentencia->execute();
     $resultado = $sentencia->get_result();
-    $ventas = $resultado->fetch_all(MYSQLI_ASSOC);
+    $compras = $resultado->fetch_all(MYSQLI_ASSOC);
 
-    if (empty($ventas)) {
+    if (empty($compras)) {
         $mensaje = "No se encontraron resultados para el código ingresado.";
     } else {
         $mensaje = ""; // Puede ser utilizado para mostrar un mensaje
     }
 } else {
     $mensaje = "Por favor, ingrese un código de barra para buscar.";
-    $ventas = []; // Sin resultados si no se ingresó código
+    $compras = []; // Sin resultados si no se ingresó código
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado de la Búsqueda</title>
+
     <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
     <?php
     // Mostrar mensaje si existe
     if ($mensaje) {
@@ -53,26 +58,25 @@ if (isset($_POST['codigo_buscado'])) {
                     <th class="item_tabla enc">Tipo de Comprobante</th>
                     <th class="item_tabla enc">Nro de Comprobante</th>
                     <th class="item_tabla enc">Fecha de Emisión</th>
-                    <th class="item_tabla enc">Cliente</th>
-                    <th class="item_tabla enc">Empleado</th>
+                    <th class="item_tabla enc">Razon Social</th>
                     <th class="item_tabla enc">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                if (!empty($ventas)) {
-                    foreach ($ventas as $venta) {
+                if (!empty($compras)) {
+                    foreach ($compras as $compra) {
                         echo "<tr>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['id']) . "</td>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['tipo_comprobante']) . "</td>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['nro_comprobante']) . "</td>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['fecha_emision']) . "</td>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['cliente_id']) . "</td>
-                            <td class='item_tabla body'>" . htmlspecialchars($venta['empleado_id']) . "</td>
+
+                            <td class='item_tabla body'>" . htmlspecialchars($compra['id']) . "</td>
+                            <td class='item_tabla body'>" . htmlspecialchars($compra['tipo_comprobante']) . "</td>
+                            <td class='item_tabla body'>" . htmlspecialchars($compra['nro_comprobante']) . "</td>
+                            <td class='item_tabla body'>" . htmlspecialchars($compra['fecha_emision']) . "</td>
+                            <td class='item_tabla body'>" . htmlspecialchars($compra['razon_social']) . "</td>
                             <td class='item_tabla body accion'>
                                 <div class='botones_accion'>
-                                    <form action='editar_venta.php?id=" . $venta['id'] . "' method='post' class='icono_accion'>
-                                        <input type='hidden' name='id' value='" . $venta['id'] . "'>
+                                    <form action='editar_compra.php?id=" . $compra['id'] . "' method='post' class='icono_accion'>
+                                        <input type='hidden' name='id' value='" . $compra['id'] . "'>
                                         <button type='submit' class='boton_editar'>
                                             <p class='text'>Editar</p>
                                             <svg width='20px' height='20px' viewBox='0 -0.5 21 21' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='white'>
@@ -89,8 +93,8 @@ if (isset($_POST['codigo_buscado'])) {
                                             </svg>
                                         </button>
                                     </form>
-                                    <form action='eliminar_venta.php?id=" . $venta['id'] . "' method='post' class='icono_accion'>
-                                        <input type='hidden' name='id' value='" . $venta['id'] . "'>
+                                    <form action='eliminar_compra.php?id=" . $compra['id'] . "' method='post' class='icono_accion'>
+                                        <input type='hidden' name='id' value='" . $compra['id'] . "'>
                                         <button type='submit' class='boton_borrar'>
                                             <p class='text'>Borrar</p>
                                             <svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='30' height='30' viewBox='0 0 30 30'>

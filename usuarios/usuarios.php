@@ -116,6 +116,7 @@ include('../header/header.php');
                     <th class="item_tabla enc">E-mail</th>
                     <th class="item_tabla enc">Estado</th>
                     <th class="item_tabla enc">Tipo de usuario</th>
+                    <th class="item_tabla enc">Acciones</th>
                 </tr>
             </thead>
             <!-- encabezado de la tabla -->

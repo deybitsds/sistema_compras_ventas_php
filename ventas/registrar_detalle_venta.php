@@ -1,6 +1,18 @@
 <?php
+include 'conexion.php'; // Incluye el archivo de conexión a la base de datos
+// Establece la conexión
+$mysqli = conexion();
 
+// Consulta para obtener los productos
+$sql = 'SELECT id, descripcion FROM productos';
+$result = $mysqli->query($sql);
 
+if ($result === false) {
+    echo 'Error en la consulta: ' . $mysqli->error;
+    exit(); // Detener la ejecución si hay un error en la consulta
+}
+
+$productos = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +23,7 @@
     <title>Sistema Tiendita de Don Pepe</title>
     
     <!-- importar css -->
-    <link rel="stylesheet" type="text/css" href="estilo_registrar_compra.css">
+    <link rel="stylesheet" type="text/css" href="estilo_registrar_venta.css">
     <!-- importar css -->
 
     <!-- importar fuentes -->
@@ -41,9 +53,9 @@
              <!-- CENTRAL  -->
              <div class="nav-center">
                  <a href="../home/home.php" class="nav-link">Inicio</a>
-                 <a href="../compras/compras.php" class="nav-link">Compras</a>
+                 <a href="../compras/compras.php" class="nav-link actual">Compras</a>
                  <a href="../ventas/ventas.php" class="nav-link">Ventas</a>
-                 <a href="../usuarios/usuarios.php" class="nav-link actual">Usuarios</a>
+                 <a href="../usuarios/usuarios.php" class="nav-link">Usuarios</a>
                  <a href="../clientes/clientes.php" class="nav-link">Clientes</a>
                  <a href="../productos/productos.php" class="nav-link">Productos</a>
                  <a href="../reportes/reportes.php" class="nav-link">Reportes</a>
@@ -95,7 +107,7 @@
             <!-- icono -->
             
             <!-- titulo -->
-            <span class="productos-texto">Registrar usuario</span>
+            <span class="productos-texto">Registrar detalle de Venta</span>
             <!-- titulo -->
 
     </div>
@@ -112,92 +124,36 @@
     <!-- Formulario  -->
 
     <div class="marco_tabla">
+<!-- registrar_detalle_venta.php -->
+<form action="procesar_registrar_detalle_venta.php" method="post">
+    <input type="hidden" name="venta_id" value="<?php echo $_POST['venta_id']; ?>">
+    <label for="producto_id">Producto ID:</label>
+    <select id="producto_id" name="producto_id" required>
+                <?php foreach ($productos as $producto): ?>
+                    <option value="<?php echo htmlspecialchars($producto['id']); ?>">
+                        <?php echo htmlspecialchars($producto['descripcion']); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </p>
 
-    <form action="procesar_registrar_usuario.php" method="post" enctype="multipart/form-data">
-        <p>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" maxlength="50" required>
-        </p>
-        <p>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" maxlength="50" required>
-        </p>
-        <p>
-            <label for="sexo">Sexo:</label>
-            <select id="sexo" name="sexo" required>
-                <option value="">Seleccione</option>
-                <option value="M">Masculino</option>
-                <option value="F">Femenino</option>
-            </select>
-        </p>
-        <p>
-            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
-        </p>
-        <p>
-            <label for="tipo_documento">Tipo de Documento:</label>
-            <select id="tipo_documento" name="tipo_documento" required>
-                <option value="">Seleccione</option>
-                <option value="DNI">DNI</option>
-                <option value="Pasaporte">Pasaporte</option>
-                <option value="Otro">Otro</option>
-            </select>
-        </p>
-        <p>
-            <label for="nro_documento">Número de Documento:</label>
-            <input type="text" id="nro_documento" name="nro_documento" maxlength="20" required>
-        </p>
-        <p>
-            <label for="foto">Foto:</label>
-            <input type="file" id="foto" name="foto" accept="image/*" required>
-        </p>
-        <p>
-            <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" maxlength="100" required>
-        </p>
-        <p>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" maxlength="15" required>
-        </p>
-        <p>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" maxlength="50" required>
-        </p>
-        <p>
-            <label for="estado">Estado:</label>
-            <select id="estado" name="estado" required>
-                <option value="">Seleccione</option>
-                <option value="Activo">Activo</option>
-                <option value="Inactivo">Inactivo</option>
-            </select>
-        </p>
-        <p>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" maxlength="20" required>
-        </p>
-        <p>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" maxlength="100" required>
-        </p>
-        <p>
-            <label for="tipo_usuario">Tipo de Usuario:</label>
-            <select id="tipo_usuario" name="tipo_usuario" required>
-                <option value="">Seleccione</option>
-                <option value="Administrador">Administrador</option>
-                <option value="Empleado">Empleado</option>
-            </select>
-        </p>
-        <p>
-            <input type="submit" value="Registrar">
-            <button type="button" class="cancel" onclick="window.location.href='usuarios.php';">Cancelar</button>
-        </p>
-    </form>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" required><br>
+
+    <label for="precio">Precio:</label>
+    <input type="number" step="0.1" id="precio" name="precio" required><br>
+
+    <input type="submit" value="Registrar Detalle">
+</form>
+</div>
 
 
-    </div>
+
     <!-- Formulario  -->
 
     </div>
     <!-- marco inferior -->
 </body>
 </html>
+
+

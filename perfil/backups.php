@@ -14,16 +14,25 @@ if (!file_exists(__DIR__ . '/respaldos')) {
     mkdir(__DIR__ . '/respaldos', 0777, true);
 }
 
+// Ruta completa al ejecutable mysqldump (ajustar según tu instalación)
+$mysqldumpPath = 'C:\xampp\mysql\bin\mysqldump.exe';
+
 // Comando para realizar el respaldo
-$comando = "mysqldump --host=$host --user=$usuario --password=$password $nombreBaseDatos > $rutaRespaldo";
+$comando = "$mysqldumpPath --host=$host --user=$usuario --password=$password $nombreBaseDatos > \"$rutaRespaldo\"";
 
 // Ejecutar el comando
 exec($comando, $salida, $resultado);
 
 // Verificar si el respaldo se realizó correctamente
 if ($resultado === 0) {
-    echo "Respaldo realizado con éxito: $nombreRespaldo";
+    $mensaje = "Respaldo realizado con éxito: $nombreRespaldo";
+    $tipo = "success";
 } else {
-    echo "Error al realizar el respaldo.";
+    $mensaje = "Error al realizar el respaldo. Código de error: $resultado. Salida del comando: " . implode("\n", $salida);
+    $tipo = "error";
 }
+
+// Redirigir con mensaje
+header("Location: editar_perfil.php?message=" . urlencode($mensaje) . "&type=" . urlencode($tipo));
+exit();
 ?>

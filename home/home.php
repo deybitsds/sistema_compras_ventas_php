@@ -26,10 +26,19 @@ include('../header/header.php');
 <hr class="custom-line2">
 <!-- linea recta 2 -->
  
+<link rel="stylesheet" type="text/css" href="estilo.css">
 
-<div class="imagen_home">
 
-<img src="img/login.jpg" width="1100" height="600" alt="Descripción de la imagen">
+<div class="marco_imagen">
+
+        <div class="imagen_home">
+        
+        <img src="img/home.png" width="700" height="600" alt="Descripción de la imagen">
+        
+        </div>
+        
+                <!-- <div class="label-opciones"> -->
+
 
 </div>
 

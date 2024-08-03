@@ -39,11 +39,8 @@ $conn->close();
 
     <!-- marco inferior -->
     <div class="marco_inferior">
-
-
     <!-- Titulo Portal -->
     <nav class="nav-links">
-
     <!-- icono + titulo  -->
     <div class="label-productos">
     <!-- icono -->
@@ -57,15 +54,12 @@ $conn->close();
     <!-- titulo -->
     <span class="productos-texto">Editar Perfil</span>
     <!-- titulo -->
-
     </div>
     <!-- icono + titulo  -->
 
         <button type="button" class="boton_reporte_hoy" onclick="window.location.href='backups.php'">
         <span class="texto_reporte_hoy">BackUp</span>
     </button>
-
-
     </nav>
     <!-- Titulo Portal -->
 
@@ -73,50 +67,49 @@ $conn->close();
     <hr class="custom-line2">
     <!-- linea recta 2 -->
 
-
     <!-- Formulario  -->
-        <div class="marco_tabla">
+    <div class="marco_tabla">
         <form id="formEditarPerfil" method="post" onsubmit="return confirmUpdate(event)">
         <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                <p>
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion" maxlength="100" value="<?php echo $usuario['direccion']; ?>" required>
-                </p>
-                <p>
-                    <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" name="telefono" maxlength="15" value="<?php echo $usuario['telefono']; ?>" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" maxlength="50" value="<?php echo $usuario['email']; ?>" required>
-                </p>
-                <p>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" maxlength="20" value="<?php echo $usuario['username']; ?>" required>
-                </p>
-                <p>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" maxlength="100" value="<?php echo $usuario['password']; ?>" required>
-                </p>
-                <p>
-                    <input type="submit" value="Guardar">
-                    <button type="button" class="cancel" onclick="window.location.href='../home/home.php';">Cancelar</button>
-                </p>
-            </form>
-        </div>
-        </div>
-        <!-- agregar el script de notificación -->
-        <script src="notificacion.js"></script>
-        
-        <!-- agregar script para mostrar notificación en base a parámetros de la URL -->
-        <script>
-            <?php
-            if (isset($_GET['message']) && isset($_GET['type'])) {
-                $message = htmlspecialchars($_GET['message']);
-                $type = htmlspecialchars($_GET['type']);
-                echo "showMessage('$type', '$message');";
-            }
-            ?>
-        </script>
+            <p>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" maxlength="100" value="<?php echo $usuario['direccion']; ?>" required>
+            </p>
+            <p>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" maxlength="15" value="<?php echo $usuario['telefono']; ?>" required>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" maxlength="50" value="<?php echo $usuario['email']; ?>" required>
+            </p>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" maxlength="20" value="<?php echo $usuario['username']; ?>" required>
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" maxlength="100" value="<?php echo $usuario['password']; ?>" required>
+            </p>
+            <p>
+                <input type="submit" value="Guardar">
+                <button type="button" class="cancel" onclick="window.location.href='../home/home.php';">Cancelar</button>
+            </p>
+        </form>
+    </div>
+    </div>
+    <!-- agregar el script de notificación -->
+    <script src="notificacion.js"></script>
+    
+    <!-- agregar script para mostrar notificación en base a parámetros de la URL -->
+    <script>
+        <?php
+        if (isset($_GET['message']) && isset($_GET['type'])) {
+            $message = htmlspecialchars($_GET['message']);
+            $type = htmlspecialchars($_GET['type']);
+            echo "showMessage('$type', '$message');";
+        }
+        ?>
+    </script>
 </body>
 </html>

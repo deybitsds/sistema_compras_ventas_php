@@ -169,7 +169,7 @@ include('../header/header.php');
                 <th class="item_tabla enc">Teléfono</th>
                 <th class="item_tabla enc">Email</th>
                 <th class="item_tabla enc">Estado</th>
-                <th class="item_tabla enc">Username</th>
+                <!-- <th class="item_tabla enc">Username</th> -->
                 <th class="item_tabla enc">Tipo de Usuario</th>
             </tr>
         </thead>
@@ -197,7 +197,6 @@ include('../header/header.php');
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->telefono; ?></td>
                     <td class="item_tabla body grande"><?php echo $reporte_empleado->email; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->estado; ?></td>
-                    <td class="item_tabla body pequeño"><?php echo $reporte_empleado->username; ?></td>
                     <td class="item_tabla body pequeño"><?php echo $reporte_empleado->tipo_usuario; ?></td>   
                 </tr>
             

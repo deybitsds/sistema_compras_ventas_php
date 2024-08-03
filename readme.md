@@ -63,13 +63,12 @@ Para ejecutar este sistema correctamente, necesitas:
 
 - **Seguridad**: Asegúrate de cambiar las contraseñas predeterminadas y de realizar copias de seguridad periódicas de la base de datos.
 - **Personalización**: Puedes modificar los estilos CSS y los scripts PHP según tus necesidades específicas.
-- **Soporte**: Si encuentras algún problema o tienes alguna duda, consulta la documentación incluida en el proyecto o contacta al desarrollador principal.
 
 ---
 
 #### Créditos
 
-Este proyecto fue desarrollado por un equipo de 5 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor Edgar Quispe Ccapacca. 
+Este proyecto fue desarrollado por un equipo de 6 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor Edgar Quispe Ccapacca. 
 
 
 ---

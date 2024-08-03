@@ -69,15 +69,16 @@ Para ejecutar este sistema correctamente, necesitas:
 
 #### Créditos
 
-Este proyecto fue desarrollado por un equipo de 5 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor [Nombre del Profesor]. 
+Este proyecto fue desarrollado por un equipo de 5 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor Edgar Quispe Ccapacca. 
 
-Fecha de entrega: 29 de julio. Exposición: 01 de agosto.
 
 ---
 
+
 #### Licencia
 
-Este proyecto está licenciado bajo [Tipo de Licencia]. Para más información, consulta el archivo LICENSE.
+Este proyecto está licenciado bajo la Licencia GPL-2.0. Para más información, consulta el archivo LICENSE.
+
 
 ---
 

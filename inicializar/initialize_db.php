@@ -17,7 +17,7 @@ $db_check_result = $conn->query($db_check_query);
 
 if ($db_check_result && $db_check_result->num_rows > 0) {
     // La base de datos ya existe
-    header("Location: login/login.php");
+    header("Location: ../login/login.php");
     exit();
 } else {
     // Leer el archivo SQL
@@ -37,9 +37,7 @@ if ($db_check_result && $db_check_result->num_rows > 0) {
         // Redirigir después de la inicialización
         header("Location: hashear.php");
         exit();
-    } else {
-        echo "Error ejecutando el script SQL: " . $conn->error;
-    }
+    } 
 }
 
 $conn->close();

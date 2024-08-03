@@ -35,7 +35,7 @@ if ($db_check_result && $db_check_result->num_rows > 0) {
             }
         } while ($conn->more_results() && $conn->next_result());
         // Redirigir después de la inicialización
-        header("Location: login/login.php");
+        header("Location: hashear.php");
         exit();
     } else {
         echo "Error ejecutando el script SQL: " . $conn->error;

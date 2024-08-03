@@ -32,4 +32,8 @@ while ($row = $result->fetch_assoc()) {
 echo "Todas las contraseñas han sido actualizadas";
 
 $conn->close();
+
+// Redirigir a login.php
+header("Location: ../login/login.php");
+exit();
 ?>

@@ -45,7 +45,10 @@ Para ejecutar este sistema correctamente, necesitas:
    - Si la página principal no se carga automáticamente, navega manualmente a `http://localhost/sistema_ventas_compras_php/index.html`.
 
 2. **Inicio de Sesión**:
-   - Usa las credenciales proporcionadas para acceder al sistema.
+   - Usa las credenciales proporcionadas para acceder al sistema:
+     - **Usuario Admin**: `jperez` - **Contraseña**: `password123`
+     - **Usuario Vendedor**: `agarcia` - **Contraseña**: `password456`
+     - **Usuario Inactivo**: `csanchez` - **Contraseña**: `password789`
    - Una vez dentro, podrás navegar por las distintas secciones del sistema usando el menú de navegación.
 
 3. **Gestión de Datos**:
@@ -68,16 +71,13 @@ Para ejecutar este sistema correctamente, necesitas:
 
 #### Créditos
 
-Este proyecto fue desarrollado por un equipo de 6 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor Edgar Quispe Ccapacca. 
-
+Este proyecto fue desarrollado por un equipo de 6 personas como parte del curso de Desarrollo de Software, bajo la supervisión del profesor Edgar Quispe Ccapacca.
 
 ---
-
 
 #### Licencia
 
 Este proyecto está licenciado bajo la Licencia GPL-2.0. Para más información, consulta el archivo LICENSE.
-
 
 ---
 
